@@ -1,5 +1,5 @@
 # **Exploratory Data Analysis on Spotify 2023 Dataset**
-The code uses Pandas to handle and manipulate data, displaying rows and columns, and uses Matplotlib and Seaborn to create plots and graphs that help illustrate trends and distributions in the data for visualization.
+The code uses `Pandas` to handle and manipulate data, displaying rows and columns, and `Matplotlib` and `Seaborn` to create plots and graphs that help illustrate trends and distributions in the data for visualization.
 
 ## Overview of Dataset
 **1. How many rows and columns does the dataset contain?**
