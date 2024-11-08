@@ -16,6 +16,8 @@ The mean, median, and standard deviation of the streams are 514137424.93907565, 
 
 **2. What is the distribution of released_year and artist_count? Are there any noticeable trends or outliers?**
 
+To analyze the distribution of `released_year` and `artist_count`, the `.describe()` function is used on the DataFrame. This provides summary statistics such as mean, standard deviation, quartiles, and percentiles for the specified columns. To observe trends over time, the average (`.mean()`) of `artist_count` for each `released_year` is calculated, and `.plot()` is used to create a line graph of the average artist count by release year. The notable spike in artist count between the years 1960 and 1980 could indicate an outlier or a unique trend in that period, where more artists collaborated on certain tracks.
+
 ## Top Performers
 **1. Which track has the highest number of streams? Display the top 5 most streamed tracks.**
 
