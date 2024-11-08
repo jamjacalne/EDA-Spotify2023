@@ -51,5 +51,8 @@ To better visualize the comparison between the number of tracks in Spotify playl
 ## Advanced Analysis
 **1. Based on the streams data, can you identify any patterns among tracks with the same key or mode (Major vs. Minor)?**
 
+To analyze patterns between streams and tracks with the same key or mode, the average streams per key and mode are calculated by grouping the data by key and mode, then using the `.mean()` function on the streams column. To sort the average streams by key in descending order, `.sort_values(ascending=False)` is applied. This reveals that tracks with the key C# in a major mode tend to receive more streams than other keys and modes.
+
 **2. Do certain genres or artists consistently appear in more playlists or charts? Perform an analysis to compare the most frequently appearing artists in playlists or charts.**
 
+To calculate the total number of times each artist appears in Spotify playlists, Spotify charts, and Apple playlists, the data is first grouped by `artist(s)_name` and the `.sum(axis=1)` function is applied on the `in_spotify_playlists`, `in_spotify_charts`, and `in_apple_playlists` columns. This gives the (row-wise) total appearances for each artist across all platforms. The results are then sorted in descending order by applying `.sort_values(by='total_appearances', ascending=False)`. This reveals that the artists with the most appearances in playlists and charts are The Weeknd, Taylor Swift, Ed Sheeran, Harry Styles, and Eminem.
