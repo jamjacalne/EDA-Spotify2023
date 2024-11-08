@@ -1,9 +1,10 @@
 # **Exploratory Data Analysis on Spotify 2023 Dataset**
+The code uses Pandas to handle and manipulate data, displaying rows and columns, and uses Matplotlib and Seaborn to create plots and graphs that help illustrate trends and distributions in the data for visualization.
 
 ## Overview of Dataset
 **1. How many rows and columns does the dataset contain?**
 
-When Python loads the .csv file, it declares a dataset with 953 rows and 24 columns.
+When Python loads the .csv file (using the `.read_csv` function), it declares a dataset with 953 rows and 24 columns.
 
 **2. What are the data types of each column? Are there any missing values?**
 
@@ -21,20 +22,20 @@ To analyze the distribution of `released_year` and `artist_count`, the `.describ
 ## Top Performers
 **1. Which track has the highest number of streams? Display the top 5 most streamed tracks.**
 
-The streams column was passed to the `.sort_value` function to extract the streams in order. Since this function sorts from lowest to highest (ascending) values, the `.tail` function was called. 
+The streams column was passed to the `.sort_value` function to extract the streams in order. Since this function sorts from lowest to highest (ascending) values, the `.tail` function was called. This reveals Dance Monkey by Tones and I, Someone You Loved by Lewis Capaldi, Shape of You by, Blinding Lights by The Weeknd, and Love Grows (Where My Rosemary Goes) by Edison Lighthouse to be the Top 5 most streamed tracks.
 
 **2. Who are the top 5 most frequent artists based on the number of tracks in the dataset?**
 
-The `.value_counts()` function was used to extract the frequency of each artist’s appearances in the dataset, ranking the artists with the most streamed songs.
+The `.value_counts()` function was used to extract the frequency of each artist’s appearances in the dataset, ranking the artists with the most streamed songs. This reveals artists Taylor Swift, The Weeknd, Bad Bunny, SZA, and Harry Styles to have the most number of most streamed tracks in the dataset.
 
 ## Temporal Trends
 **1. Analyze the trends in the number of tracks released over time. Plot the number of tracks released per year.**
 
-To analyze trends in track releases per year, a line plot was created using the matplotlib library, clearly visualizing the rise and fall of trends over time.
+To analyze trends in track releases per year, a line plot was created using the matplotlib library, clearly visualizing the rise and fall of trends over time. The line graph shows that the number of tracks released per year has increased significantly in recent years, with a sharp spike near the end of the timeline. This trend suggests that music production has increased over time, especially in the most recent years shown.
 
 **2. Does the number of tracks released per month follow any noticeable patterns? Which month sees the most releases?**
 
-Using the matplotlib library, a bar plot was created to analyze patterns in track releases per month. The plot shows spikes in January and May, making these the months with the most streamed tracks.
+Using the Matplotlib library, a bar plot was created to analyze patterns in track releases per month. The plot shows spikes in January and May, indicating that these are the months with the highest number of track releases.
 
 ## Genre and Music Characteristics
 **1. Examine the correlation between streams and musical attributes like bpm, danceability_%, and energy_%. Which attributes seem to influence streams the most?**
